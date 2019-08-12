@@ -1,3 +1,5 @@
+import {firebaseDb} from '../firebase/index'
+
 export const initialState = {
     chat: "",
     inputChat: [],
@@ -10,11 +12,15 @@ const chatReducer = (state = initialState,action) => {
                 ...state,
                 chat: action.payload.chat
             }
-        case "CHAT_MESSAGE" :
+        case "EQUAL_DATABASE" :
+            const copy = state.inputChat.slice()
+            copy.unshift({
+                text:action.payload.chat,
+                time:action.payload.time
+            })
             return{
                 ...state,
-                chat:"",
-                inputChat:state.inputChat.concat([action.payload.chat])
+                inputChat:copy
             }
         default :
             return state

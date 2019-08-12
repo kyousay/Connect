@@ -9,10 +9,10 @@ export default ({inputChat}) => {
                 {inputChat.map((chat,index) => {
                     return(
                         <div className="chatPanel_message" key={index}>
-                            <div class="chatPanel_imgBox">
-                                <img src={kaiji} class="chatPanel_img" alt="プロフィール写真"/>
+                            <div className="chatPanel_imgBox">
+                                <img src={kaiji} className="chatPanel_img" alt="プロフィール写真"/>
                             </div>
-                            <p class="chatPanel_text">{chat}</p>
+                            <p className="chatPanel_text">{chat.text}</p>
                         </div>
                     )
                 })}

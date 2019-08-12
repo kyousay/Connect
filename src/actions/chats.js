@@ -5,9 +5,9 @@ export const inputChat = (chat) => ({
     }
 })
 
-export const addChat = (chat) => ({
-    type:'CHAT_MESSAGE',
+export const equalDatabase = (inputChat) => ({
+    type:'EQUAL_DATABASE',
     payload:{
-        chat
+        inputChat
     }
 })

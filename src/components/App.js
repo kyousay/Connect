@@ -6,15 +6,12 @@ import {firebaseDb} from '../firebase/index'
 
 export default class extends Component{
     async componentDidMount() {
-        // const ref = firebaseDb.ref('rooms').child('room1').child('chat')
-        // ref.push({
-        //     title:"こんにちは",
-        //     time:(new Date().getHours()).toString() + ":" + (new Date().getMinutes()).toString(),
-        // })
-        // ref.once('value').then(function(snapshot){
-        //     console.log(snapshot.val())
-        // })
-      }
+        const {equalDatabase} = this.props
+        const ref = firebaseDb.ref('rooms').child('room1').child('chat')
+        ref.on('value',function(snapshot){
+            equalDatabase(Object.values(snapshot.val()))
+        })
+    }
     render(){
         return(
             <>
