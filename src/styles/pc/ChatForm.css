@@ -1,0 +1,25 @@
+.chatForm{
+    max-width: 960px;
+    margin: 20px auto 0;
+}
+
+.chatForm_panel{
+    text-align: center;
+}
+
+.chatForm_text{
+    padding: 20px;
+    font-size: 1.8rem;
+    border: 3px solid #d3d3d3;
+}
+
+.chatForm_sendButton{
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #fff;
+}
+
+.chatForm_icon{
+    font-size: 1.8rem;
+    color: rgb(29, 161, 242);
+}

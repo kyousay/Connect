@@ -1,0 +1,49 @@
+.chatPanel{
+    max-width: 960px;
+    min-height: 500px;
+    max-height: 500px;
+    border: 3px solid #d3d3d3;
+    background-color: #fff;
+    margin: 20px auto 0;
+    overflow: scroll
+}
+
+.chatPanel_message{
+    display: flex;
+    max-width: 500px;
+    padding: 20px;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.chatPanel_imgBox{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.chatPanel_img{
+    width: 50px;
+    height: 50px;
+}
+.chatPanel_text{
+    position: relative;
+    padding: 10px;
+    margin-left: 20px;
+    max-width: 430px;
+    color: #fff;
+    background-color: rgb(29, 161, 242);
+    border-radius: 5px;
+}
+
+.chatPanel_text:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid rgb(29, 161, 242);
+    z-index: 0;
+  }
