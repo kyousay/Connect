@@ -18,7 +18,6 @@ const mapDispatchToProps = (dispatch) => {
       refLogin: () => {
         firebase.auth().onAuthStateChanged(user => {
           if (!user) {
-            alert('認証が失敗しました')
             return
           }
           dispatch(loginOk(user))

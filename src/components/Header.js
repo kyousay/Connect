@@ -4,8 +4,6 @@ import '../styles/pc/Header.css'
 export default class extends Component{
     render(){
         const {title,isLogin,logOut} = this.props
-        console.log(logOut)
-        console.log(this.props)
         const element = isLogin? <HeaderContents logOut={logOut} /> : null
         
         return(

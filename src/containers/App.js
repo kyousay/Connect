@@ -3,7 +3,7 @@ import  App  from '../components/App'
 
 const mapStateToProps = (state) => {
     return{
-        uid: state.auth.uid
+        uid: state.profile.uid
     }
 }
 

@@ -2,7 +2,7 @@ export const initialState = {
     chat: "",
     inputChat: [],
     isLogin: false,
-    auth:{
+    profile:{
         uid: '',
         displayName: '',
         email:''
@@ -26,7 +26,7 @@ const chatReducer = (state = initialState,action) => {
         case "LOGIN_OK" : 
             return{
                 ...state,
-                auth: {
+                profile: {
                     uid: action.payload.uid,
                     email: action.payload.email,
                     displayName: action.payload.displayName,
@@ -36,7 +36,7 @@ const chatReducer = (state = initialState,action) => {
         case "LOGOUT" :
             return{
                 ...state,
-                auth: {
+                profile: {
                     uid: "",
                     email: "",
                     displayName: ""

@@ -11,7 +11,6 @@ export default class extends Component{
         ref.on('value',function(snapshot){
             if(snapshot.val()){
                 equalDatabase(Object.values(snapshot.val()))
-                console.log(Object.values(snapshot.val()))
             }
         })
     }
@@ -23,9 +22,9 @@ export default class extends Component{
                     {inputChat.map((chat,index) => {
                         return(
                             <div className="chatPanel_message" key={index}>
-                                <div className="chatPanel_imgBox">
-                                    <img src={kaiji} className="chatPanel_img" alt="プロフィール写真"/>
-                                </div>
+                                    <div className="chatPanel_imgBox">
+                                        <img src={kaiji} className="chatPanel_img" alt="プロフィール写真"/>
+                                    </div>
                                 <p className="chatPanel_text">{chat.text}</p>
                                 <span className="chatPanel_time">{chat.time}</span>
                             </div>

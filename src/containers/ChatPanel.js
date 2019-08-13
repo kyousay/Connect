@@ -3,7 +3,9 @@ import { equalDatabase} from '../actions/chats'
 import ChatPanel from '../components/ChatPanel'
 
 const mapStateToProps = (states) => {
-    return ({inputChat:states.inputChat})
+    return ({
+        inputChat:states.inputChat
+    })
 }
 
 const mapDispatchToProps = (dispatch) => {
