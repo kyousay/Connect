@@ -1,16 +1,25 @@
 import { connect } from 'react-redux'
 import { equalDatabase} from '../actions/chats'
 import ChatPanel from '../components/ChatPanel'
+import {firebaseDb} from '../firebase/index'
 
-const mapStateToProps = (states) => {
+const mapStateToProps = ({inputChat,profile}) => {
     return ({
-        inputChat:states.inputChat
+        inputChat,
+        profile
     })
 }
 
 const mapDispatchToProps = (dispatch) => {
     return({
-        equalDatabase:(inputChat) => dispatch(equalDatabase(inputChat))
+        refDatabase:() => {
+            const ref = firebaseDb.ref('rooms').child('room1').child('chat')
+            ref.on('value',function(snapshot){
+                if(snapshot.val()){
+                    dispatch(equalDatabase(Object.values(snapshot.val())))
+                }
+            })
+        }
     })
 }
 

@@ -1,7 +1,7 @@
 import React , {Component} from 'react'
 import '../styles/pc/ChatForm.css'
 import '../styles/sm/ChatForm.css'
-import {firebaseDb} from '../firebase/index'
+
 
 export default class extends Component{
     handleCancel = (e) =>{
@@ -11,11 +11,7 @@ export default class extends Component{
         if(chat === ""){
             return false
         }else{
-            const ref = firebaseDb.ref('rooms').child('room1').child('chat')
-            ref.push({
-                text:chat,
-                time:(new Date().getHours()).toString() + ":" + (new Date().getMinutes()).toString()
-            })
+            this.props.inputDatabase()
         }
     }
     render(){

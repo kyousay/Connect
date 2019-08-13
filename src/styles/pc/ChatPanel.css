@@ -16,6 +16,12 @@
     word-wrap: break-word;
     white-space: normal;
 }
+
+.chatPanel_message.reverse {
+    margin: 0 0 0 auto;
+    flex-direction: row-reverse;
+}
+
 .chatPanel_imgBox{
     width: 50px;
     height: 50px;
@@ -37,12 +43,22 @@
     border-radius: 5px;
 }
 
+.chatPanel_message.reverse .chatPanel_text{
+    margin-left: unset;
+    margin-right: 20px;
+}
+
 .chatPanel_time{
     display: block;
     margin-left: 10px;
     max-width: 30px;
     font-size: 1.0rem;
     align-self: flex-end;
+}
+
+.chatPanel_message.reverse .chatPanel_time{
+    margin-left: 0;
+    margin-right: 10px;
 }
 .chatPanel_text:before {
     content: "";
@@ -53,4 +69,11 @@
     border: 15px solid transparent;
     border-right: 15px solid rgb(29, 161, 242);
     z-index: 0;
+  }
+
+  .chatPanel_message.reverse .chatPanel_text:before  {
+      right: -15px;
+      left: unset;
+      border-right: none;
+      border-left: 15px solid rgb(29,161,242);
   }
