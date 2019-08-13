@@ -14,3 +14,13 @@
 .header_title{
     color: #fff;
 }
+
+.header_logout{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translateY(-50%);
+}

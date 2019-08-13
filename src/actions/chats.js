@@ -11,3 +11,16 @@ export const equalDatabase = (inputChat) => ({
         inputChat
     }
 })
+
+export const loginOk = (user) => ({
+    type:'LOGIN_OK',
+    payload: {
+        displayName: user.displayName,
+        email: user.email,
+        uid: user.uid
+    }
+})
+
+export const logOut = () => ({
+    type:'LOGOUT'  
+})

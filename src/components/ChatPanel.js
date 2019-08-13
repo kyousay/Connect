@@ -5,16 +5,16 @@ import kaiji from '../styles/img/カイジ.png'
 import {firebaseDb} from '../firebase/index'
 
 export default class extends Component{
-    // async componentDidMount() {
-    //     const {equalDatabase} = this.props
-    //     const ref = firebaseDb.ref('rooms').child('room1').child('chat')
-    //     ref.on('value',function(snapshot){
-    //         if(snapshot.val()){
-    //             equalDatabase(Object.values(snapshot.val()))
-    //             console.log(Object.values(snapshot.val()))
-    //         }
-    //     })
-    // }
+    async componentDidMount() {
+        const {equalDatabase} = this.props
+        const ref = firebaseDb.ref('rooms').child('room1').child('chat')
+        ref.on('value',function(snapshot){
+            if(snapshot.val()){
+                equalDatabase(Object.values(snapshot.val()))
+                console.log(Object.values(snapshot.val()))
+            }
+        })
+    }
     render(){
         const {inputChat} = this.props
         return(

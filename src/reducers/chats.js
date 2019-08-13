@@ -1,6 +1,7 @@
 export const initialState = {
     chat: "",
     inputChat: [],
+    isLogin: false,
     auth:{
         uid: '',
         displayName: '',
@@ -21,6 +22,26 @@ const chatReducer = (state = initialState,action) => {
                 ...state,
                 chat:"",
                 inputChat:copy
+            }
+        case "LOGIN_OK" : 
+            return{
+                ...state,
+                auth: {
+                    uid: action.payload.uid,
+                    email: action.payload.email,
+                    displayName: action.payload.displayName,
+                },
+                isLogin: true,
+            }
+        case "LOGOUT" :
+            return{
+                ...state,
+                auth: {
+                    uid: "",
+                    email: "",
+                    displayName: ""
+                },
+                isLogin: false
             }
         default :
             return state

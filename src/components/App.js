@@ -1,8 +1,8 @@
 import React,{Component}from 'react'
-import Header from './Header'
+import Header from '../containers/Header'
 import ChatPanel from '../containers/ChatPanel'
 import ChatForm from '../containers/ChatForm'
-import Login from './Login'
+import Login from '../containers/Login'
 
 export default class extends Component{
     render(){
