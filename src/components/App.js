@@ -6,8 +6,8 @@ import Login from '../containers/Login'
 
 export default class extends Component{
     render(){
-        const { uid } = this.props
-        const element = uid ?
+        const { isLogin } = this.props
+        const element = isLogin ?
         <>
             <ChatPanel />
             <ChatForm />
