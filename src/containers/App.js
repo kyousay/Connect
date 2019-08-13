@@ -1,12 +1,12 @@
+// import firebase from 'firebase'
 import { connect } from 'react-redux'
-import App from '../components/App'
-import { equalDatabase } from '../actions/chats'
+import  App  from '../components/App'
 
-const mapStateToProps = ({state}) => ({
-    state
-})
-const mapDispatchToProps = (dispatch) => ({
-    equalDatabase:(inputChat) => dispatch(equalDatabase(inputChat))
-})
+const mapStateToProps = (state) => {
+    console.log(state.auth.uid)
+    return{
+        uid: state.auth.uid
+    }
+}
 
-export default connect(mapStateToProps,mapDispatchToProps)(App)
+export default connect(mapStateToProps)(App)

@@ -1,0 +1,83 @@
+.login_messageBox {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.login_text {
+    line-height: 1.5;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.login_formBox {
+  margin: 50px auto 0;
+  padding: 20px 50px;
+  max-width: 500px;
+  background-color: #fff
+}
+
+.login_formTitle {
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+.login_formTextButton {
+  margin-top: 20px;
+  padding: 5px 15px;
+  font-size: 2.0rem;
+  background-color: rgb(29, 161, 242);
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+}
+
+.login_formText {
+  display: block;
+  margin-top: 10px;
+  width: 300px;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+}
+
+.login_formTextBox {
+  margin-top: 30px;
+}
+
+.login_acount {
+  margin-top: 20px;
+}
+
+.login_acountText {
+  font-size: 1.4rem;
+  color: #808080;
+}
+
+.login_acountButton {
+  margin-top: 20px;
+  border: 2px solid #ffd700;
+  padding: 10px 20px;
+  background-color: #fff;
+  width: 200px;
+
+}
+.font-color--google {
+  color: #ffd700;
+  font-size: 3.0rem;
+}
+
+.login_logo {
+  animation: App-logo-spin infinite 20s linear;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+  
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
