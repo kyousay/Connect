@@ -24,15 +24,16 @@
 .login_formTextButton {
   margin-top: 20px;
   padding: 5px 15px;
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   background-color: rgb(29, 161, 242);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 100px;
   border: none;
 }
 
 .login_formText {
   display: block;
+  padding: 8px;
   margin-top: 10px;
   width: 300px;
   font-size: 1.8rem;
@@ -63,6 +64,15 @@
 .font-color--google {
   color: #ffd700;
   font-size: 3.0rem;
+}
+
+.login_acountTabSwitch {
+  color: rgb(29, 161, 242);
+}
+
+.login_acountTabSwitch:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .login_logo {

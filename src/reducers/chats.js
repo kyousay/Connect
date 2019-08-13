@@ -6,7 +6,7 @@ export const initialState = {
         uid: '',
         displayName: '',
         email:''
-    }
+    },
 }
 
 const chatReducer = (state = initialState,action) => {
