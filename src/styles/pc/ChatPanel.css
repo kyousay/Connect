@@ -1,11 +1,11 @@
 .chatPanel{
     max-width: 960px;
-    min-height: 500px;
-    max-height: 500px;
+    min-height: 1000px;
     border: 3px solid #d3d3d3;
     background-color: #fff;
     margin: 20px auto 0;
-    overflow: scroll
+    overflow: scroll;
+    padding-top: 70px;
 }
 
 .chatPanel_message{
@@ -31,12 +31,19 @@
     position: relative;
     padding: 10px;
     margin-left: 20px;
-    max-width: 430px;
+    max-width: 390px;
     color: #fff;
     background-color: rgb(29, 161, 242);
     border-radius: 5px;
 }
 
+.chatPanel_time{
+    display: block;
+    margin-left: 10px;
+    max-width: 30px;
+    font-size: 1.0rem;
+    align-self: flex-end;
+}
 .chatPanel_text:before {
     content: "";
     position: absolute;

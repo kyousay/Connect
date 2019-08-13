@@ -1,5 +1,6 @@
 import React , {Component} from 'react'
 import '../styles/pc/ChatForm.css'
+import '../styles/sm/ChatForm.css'
 import {firebaseDb} from '../firebase/index'
 
 export default class extends Component{
@@ -13,7 +14,7 @@ export default class extends Component{
             const ref = firebaseDb.ref('rooms').child('room1').child('chat')
             ref.push({
                 text:chat,
-                time:
+                time:(new Date().getHours()).toString() + ":" + (new Date().getMinutes()).toString()
             })
         }
     }

@@ -1,0 +1,10 @@
+@media screen and (max-width: 400px) {
+    .chatForm_text{
+        padding: 15px;
+        width: 250px;
+    }
+    .chatForm_sendButton{
+        padding: 17px;
+        margin-left: 10px;
+    }
+}

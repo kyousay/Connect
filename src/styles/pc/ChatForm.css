@@ -1,16 +1,22 @@
 .chatForm{
-    max-width: 960px;
-    margin: 20px auto 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .chatForm_panel{
     text-align: center;
+    padding: 10px 0px;
+    background-color: #d3d3d3;
 }
 
 .chatForm_text{
     padding: 20px;
     font-size: 1.8rem;
     border: 3px solid #d3d3d3;
+    max-height: 200px;
+    width: 50%;
 }
 
 .chatForm_sendButton{

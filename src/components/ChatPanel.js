@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/pc/ChatPanel.css'
+import '../styles/sm/ChatPanel.css'
 import kaiji from '../styles/img/カイジ.png'
 
 export default ({inputChat}) => {
@@ -13,6 +14,7 @@ export default ({inputChat}) => {
                                 <img src={kaiji} className="chatPanel_img" alt="プロフィール写真"/>
                             </div>
                             <p className="chatPanel_text">{chat.text}</p>
+                            <span className="chatPanel_time">{chat.time}</span>
                         </div>
                     )
                 })}

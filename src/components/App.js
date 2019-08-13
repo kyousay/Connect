@@ -9,7 +9,10 @@ export default class extends Component{
         const {equalDatabase} = this.props
         const ref = firebaseDb.ref('rooms').child('room1').child('chat')
         ref.on('value',function(snapshot){
-            equalDatabase(Object.values(snapshot.val()))
+            if(snapshot.val()){
+                equalDatabase(Object.values(snapshot.val()))
+                console.log(Object.values(snapshot.val()))
+            }
         })
     }
     render(){
