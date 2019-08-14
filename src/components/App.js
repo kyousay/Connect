@@ -2,24 +2,36 @@ import React,{Component}from 'react'
 import Header from '../containers/Header'
 import ChatPanel from '../containers/ChatPanel'
 import ChatForm from '../containers/ChatForm'
+import Home from '../containers/Home'
 import Login from '../containers/Login'
-import { Route,Switch } from 'react-router-dom'
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom'
 
 export default class extends Component{
     render(){
         const { isLogin } = this.props
         const element = isLogin ?
-        <>
-            <ChatPanel />
-            <ChatForm />
-        </>
+        <Router>
+            <Switch>
+                <Route exact path="/" component={ChatRoom} />
+                <Route component={Home} />
+            </Switch>
+        </Router>
         : 
         <Login />
         return(
             <>
-                <Header title={"CONNECT"}/>
                 {element}
             </>
         )
     }
+}
+
+const ChatRoom = () => {
+    return (
+        <>
+            <Header title={"CONNECT"}/>
+            <ChatPanel />
+            <ChatForm />
+        </>
+    )
 }

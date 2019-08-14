@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import Header from '../containers/Header'
 import '../styles/pc/Login.css'
 import logo from '../styles/img/logo.svg'
 
@@ -14,11 +15,9 @@ export default class extends Component{
     }
     setEmail = (value) => {
         this.setState({email:value})
-        console.log(this.state)
     }
     setPassword = (value) => {
         this.setState({password:value})
-        console.log(this.state)
     }
     tabSwitch = (index) => {
         const tab = index === 1 ? 2 : 1
@@ -29,15 +28,17 @@ export default class extends Component{
     }
     componentDidMount() {
         this.props.refLogin()
+        this.setState({tabIndex:1})
       }
 
     render(){
         const tab = this.state.tabIndex === 1 ? 
-        <NewAcountForm handleCancel={this.handleCancel} tabSwitch={this.tabSwitch} {...this.state} setEmail={this.setEmail} setPassword={this.setPassword} createAcount={this.props.createAcount}/>
-         : 
         <LogInForm handleCancel={this.handleCancel} doLogin={this.props.doLogin} tabSwitch={this.tabSwitch} {...this.state} />
+         : 
+        <NewAcountForm handleCancel={this.handleCancel} tabSwitch={this.tabSwitch} {...this.state} setEmail={this.setEmail} setPassword={this.setPassword} createAcount={this.props.createAcount}/>
         return(
             <>
+                <Header title={"CONNECT"}/>
                 <div className="login_messageBox">
                     <img src={logo} className="login_logo" alt="logo" />
                     <h2 className="login_text">Let's connect your friends, family, <br></br>peopele in the world</h2>

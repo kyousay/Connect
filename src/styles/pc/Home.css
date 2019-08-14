@@ -1,0 +1,48 @@
+.profile_wrapper{
+    margin: 70px auto 0;
+    max-width: 800px;
+}
+
+.profile_imgBox{
+    margin: 100px auto 0px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile_img{
+    width: 400px;
+    height: 400px;
+}
+
+.profile_name{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.profile_changeForm{
+    margin: 50px auto 0;
+    width: 200px;
+}
+
+.profile_imgSelectLabel{
+    display: block;
+    font-size: 1.5rem;
+    color: #808080;
+}
+
+.profile_imgSelect{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.profile_imgSelectButton{
+    margin-top: 10px;
+    border-radius: 100px;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
