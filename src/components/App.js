@@ -3,6 +3,7 @@ import Header from '../containers/Header'
 import ChatPanel from '../containers/ChatPanel'
 import ChatForm from '../containers/ChatForm'
 import Login from '../containers/Login'
+import { Route,Switch } from 'react-router-dom'
 
 export default class extends Component{
     render(){
@@ -14,7 +15,6 @@ export default class extends Component{
         </>
         : 
         <Login />
-        
         return(
             <>
                 <Header title={"CONNECT"}/>
