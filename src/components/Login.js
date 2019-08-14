@@ -10,8 +10,16 @@ export default class extends Component{
         this.state = {
             tabIndex: 1,
             email: '',
-            password: ''
+            password: '',
+            authEmail: '',
+            authPassword: ''
         }
+    }
+    setAuthEmail = (value) => {
+        this.setState({authEmail: value})
+    }
+    setAuthPassword = (value) => {
+        this.setState({authPassword: value })
     }
     setEmail = (value) => {
         this.setState({email:value})
@@ -25,6 +33,7 @@ export default class extends Component{
     }
     handleCancel = (e) => {
         e.preventDefault()
+        this.props.doLoginWithEmail(this.state.authEmail,this.state.authPassword)
     }
     componentDidMount() {
         this.props.refLogin()
@@ -33,7 +42,7 @@ export default class extends Component{
 
     render(){
         const tab = this.state.tabIndex === 1 ? 
-        <LogInForm handleCancel={this.handleCancel} doLogin={this.props.doLogin} tabSwitch={this.tabSwitch} {...this.state} />
+        <LogInForm handleCancel={this.handleCancel} doLogin={this.props.doLogin} tabSwitch={this.tabSwitch} {...this.state} setAuthPassword={this.setAuthPassword} setAuthEmail={this.setAuthEmail}/>
          : 
         <NewAcountForm handleCancel={this.handleCancel} tabSwitch={this.tabSwitch} {...this.state} setEmail={this.setEmail} setPassword={this.setPassword} createAcount={this.props.createAcount}/>
         return(
@@ -58,8 +67,8 @@ const LogInForm = (props) => {
             <form className="login_form" onSubmit={e => props.handleCancel(e)}>
                 <h3 className="login_formTitle">Log in to Connect</h3>
                 <div className="login_formTextBox">
-                    <input type="text" className="login_formText" placeholder="Email Address"/>
-                    <input type="password" className="login_formText" placeholder="Password" />
+                    <input type="text" className="login_formText" value={props.authEmail} placeholder="Email Address" onChange={(e) => props.setAuthEmail(e.target.value)}/>
+                    <input type="password" className="login_formText" value={props.authPassword} placeholder="Password" onChange={e => props.setAuthPassword(e.target.value)}/>
                     <button type="send" className="login_formTextButton">Login</button>
                 </div>
             </form>

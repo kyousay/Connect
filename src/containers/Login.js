@@ -23,6 +23,14 @@ const mapDispatchToProps = (dispatch) => {
           dispatch(loginOk(user))
         })
       },
+      doLoginWithEmail: (email,password) => {
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .catch(function(error) {
+          // Handle Errors here.
+          var errorMessage = error.message;
+          alert(errorMessage)
+        });
+      },
       createAcount: (email,password) => {
         firebase.auth().createUserWithEmailAndPassword(email, password)
           .catch(function(error) {

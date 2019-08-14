@@ -7,6 +7,6 @@ const mapStateToProps = ({profile}) => {
     }
 }
 
-const mapDispatchToProps = ({})
+// const mapDispatchToProps = ({})
 
 export default connect(mapStateToProps)(Home)
