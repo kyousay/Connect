@@ -16,6 +16,7 @@
 }
 
 .header_nav{
+    cursor: pointer;
     position: absolute;
     width: 20px;
     height: 16px;
@@ -59,12 +60,9 @@
     font-size: 2.0rem;
     padding: 20px;
     color: rgb(29, 161, 242);
-}
-
-.header_menuList{
     border-top: 2px solid #cdcdcd;
 }
 
-.header_manuList{
-    border-bottom: 2px solid #cdcdcd;
+.header_menuList:hover{
+    background-color: #cdcdcd;    
 }

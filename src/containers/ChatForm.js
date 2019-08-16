@@ -16,11 +16,13 @@ const mergeProps = (stateProps,dispatchProps,ownProps) => {
     return Object.assign({},ownProps,stateProps,{
         ...dispatchProps,
         inputDatabase:() => {
+            const userName = stateProps.profile.displayName || stateProps.profile.email
             const ref = firebaseDb.ref('rooms').child('room1').child('chat')
             ref.push({
                 text:stateProps.chat,
                 time:(new Date().getHours()).toString() + ":" + (new Date().getMinutes()).toString(),
-                id: stateProps.profile.uid 
+                id: stateProps.profile.uid,
+                displayName: userName
             })
         }
     })

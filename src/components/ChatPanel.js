@@ -9,14 +9,14 @@ export default class extends Component{
         this.props.refDatabase()
     }
     render(){
-        const {inputChat,profile} = this.props
+        const {inputChat,profile} = this.props     
         return(
             <div className="chatPanel">
                 <div className="chatPanel_content">
                     {inputChat.map((chat,index) => {
                         const user = chat.id === profile.uid ? "chatPanel_message reverse": "chatPanel_message"
                         const img = chat.id === profile.uid ? profile.img : defaultImage
-                        const userName = chat.id === profile.uid ? profile.displayName || profile.email : 'anonymous' 
+                        const userName = chat.id === profile.uid ? profile.displayName || profile.email : chat.displayName 
                         return(
                             <div className={user} key={index}>
                                     <div className="chatPanel_Box">
