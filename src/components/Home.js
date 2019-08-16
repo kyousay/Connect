@@ -24,6 +24,7 @@ export default class extends Component {
 
     render(){
         const {profile} = this.props
+        const img = profile.img
         const name = profile.displayName ? profile.displayName : profile.email
         return(
             <>
@@ -31,7 +32,7 @@ export default class extends Component {
                 <div className="profile_wrapper">
                     <div className="profile_data">
                         <div className="profile_imgBox">
-                            <img src={kaiji} alt="プロフィール写真" className="profile_img"/>
+                            <img src={img} alt="プロフィール写真" className="profile_img"/>
                         </div>
                         <p className="profile_name">{name}</p>
                         <form className="profile_changeForm" onSubmit={(e) => this.uploadImg(e)}>

@@ -5,7 +5,7 @@
     background-color: #fff;
     margin: 20px auto 0;
     overflow: scroll;
-    padding-top: 70px;
+    padding: 70px 0 90px;
 }
 
 .chatPanel_message{
@@ -22,16 +22,25 @@
     flex-direction: row-reverse;
 }
 
+.chatPanel_userName{
+    font-size: 1.0rem;
+    margin-bottom: 5px;
+    width: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .chatPanel_imgBox{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
 }
 .chatPanel_img{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 .chatPanel_text{
     position: relative;

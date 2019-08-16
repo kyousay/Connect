@@ -5,7 +5,8 @@ export const initialState = {
     profile:{
         uid: '',
         displayName: '',
-        email:''
+        email:'',
+        img: ''
     },
 }
 
@@ -17,7 +18,7 @@ const chatReducer = (state = initialState,action) => {
                 chat: action.payload.chat
             }
         case "EQUAL_DATABASE" :
-            const copy = action.payload.inputChat.reverse()
+            const copy = action.payload.inputChat
             return{
                 ...state,
                 chat:"",
@@ -42,6 +43,16 @@ const chatReducer = (state = initialState,action) => {
                     displayName: ""
                 },
                 isLogin: false
+            }
+        case 'SET_PROFILEIMAGE' :
+            return{
+                ...state,
+                profile: {
+                    uid:state.profile.uid,
+                    email:state.profile.email,
+                    displayName:state.profile.displayName,
+                    img:action.payload.img
+                }
             }
         default :
             return state

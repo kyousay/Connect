@@ -24,3 +24,10 @@ export const loginOk = (user) => ({
 export const logOut = () => ({
     type:'LOGOUT'  
 })
+
+export const setProfileImage = (img) => ({
+    type:'SET_PROFILEIMAGE',
+    payload: {
+        img
+    }
+})

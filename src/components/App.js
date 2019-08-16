@@ -12,7 +12,8 @@ export default class extends Component{
         const element = isLogin ?
         <Router>
             <Switch>
-                <Route exact path="/" component={ChatRoom} />
+                <Route exact path="/chat" component={ChatRoom} />
+                <Route exact path="/home" component={Home} />
                 <Route component={Home} />
             </Switch>
         </Router>
