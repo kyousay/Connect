@@ -15,7 +15,7 @@ export default class extends Component{
                 <div className="chatPanel_content">
                     {inputChat.map((chat,index) => {
                         const user = chat.id === profile.uid ? "chatPanel_message reverse": "chatPanel_message"
-                        const img = chat.id === profile.uid ? profile.img : defaultImage
+                        const img = chat.img  ? chat.img : defaultImage
                         const userName = chat.id === profile.uid ? profile.displayName || profile.email : chat.displayName 
                         return(
                             <div className={user} key={index}>

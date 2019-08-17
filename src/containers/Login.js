@@ -60,13 +60,12 @@ const mapDispatchToProps = (dispatch) => {
               storageRef.getDownloadURL().then(function(url){
               dispatchProps.dispatch(setProfileImage(url))
               }).catch(function(error) {
-
                 // A full list of error codes is available at
                 // https://firebase.google.com/docs/storage/web/handle-errors
                 switch (error.code) {
                   case 'storage/object-not-found':
                     // File doesn't exist
-                    dispatchProps.dispatch(setProfileImage(defaultImage))
+                    dispatchProps.dispatch(setProfileImage(defaultImage))   
                     break;
               
                   case 'storage/unauthorized':
